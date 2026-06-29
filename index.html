@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AhJo Badminton | Malaysia's Ultimate Superfan & Content Creator</title>
+  <style>
+    :root {
+      --primary-color: #d32f2f; /* Jalur Gemilang Red */
+      --secondary-color: #ffcc00; /* Jalur Gemilang Yellow / Premium Gold */
+      --dark-blue: #06101e; /* Ultra-Premium Deep Midnight Blue */
+      --light-bg: #f8f9fa;
+      --text-color: #333333;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      background: #ffffff; 
+      color: var(--text-color); 
+      line-height: 1.6; 
+    }
+
+    /* PREMIUM HERO HEADER */
+    header { 
+      background: linear-gradient(180deg, var(--dark-blue) 0%, #0d1f38 100%); 
+      color: white; 
+      padding: 90px 20px; 
+      text-align: center; 
+      position: relative;
+      border-bottom: 5px solid var(--primary-color);
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(211,47,47,0.15) 0%, rgba(0,0,0,0) 60%);
+      pointer-events: none;
+    }
+
+    header h1 { 
+      font-size: 3.5rem; 
+      font-weight: 900; 
+      text-transform: uppercase;
+      letter-spacing: 3px; 
+      margin-bottom: 15px; 
+      background: linear-gradient(135deg, #ffffff 60%, var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    header p { 
+      font-size: 1.3rem; 
+      color: var(--secondary-color); 
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 600; 
+      opacity: 0.95;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Container */
+    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+
+    /* Quote Banner */
+    .quote { 
+      font-size: 1.3rem;
+      font-style: italic; 
+      text-align: center; 
+      margin-bottom: 40px; 
+      padding: 25px;
+      background: var(--light-bg);
+      border-left: 5px solid var(--primary-color);
+      color: #0d1f38;
+      font-weight: 600;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    h2 { 
+      color: #0d1f38; 
+      font-size: 1.8rem; 
+      margin: 35px 0 15px 0; 
+      position: relative;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    p { margin-bottom: 15px; font-size: 1.05rem; color: #444; }
+
+    /* Lists */
+    ul { list-style-type: none; margin-bottom: 20px; }
+    ul li { margin-bottom: 8px; position: relative; padding-left: 22px; font-size: 1.05rem; }
+    ul li::before {
+      content: "⚡";
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+    }
+
+    /* Column Layout for Timelines */
+    .row { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
+    .col { flex: 1; min-width: 280px; }
+
+    /* Timeline Cards */
+    .journey-card {
+      background: var(--light-bg); 
+      padding: 20px; 
+      border-radius: 8px; 
+      border-left: 4px solid var(--primary-color);
+      height: 100%;
+    }
+    .journey-card.featured {
+      border-left-color: var(--secondary-color);
+      background: linear-gradient(to bottom right, #fffdf2, var(--light-bg));
+    }
+    .journey-card h3 { color: #0d1f38; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+
+    /* BALANCED 12-PHOTO GRID GALLERY */
+    .gallery { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+      gap: 15px; 
+      margin: 25px 0; 
+    }
+    .gallery img { 
+      width: 100%; 
+      height: 280px; 
+      object-fit: cover; 
+      border-radius: 8px; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08); 
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover { 
+      transform: scale(1.03); 
+    }
+
+    /* Contact & Social Footer Block */
+    .contact-box {
+      background: var(--light-bg);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      border-top: 4px solid var(--primary-color);
+      margin-top: 40px;
+    }
+    
+    .social-btn {
+      display: inline-block;
+      padding: 10px 24px;
+      margin: 10px 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 20px;
+      transition: opacity 0.3s;
+    }
+    .fb { background: #1877f2; }
+    .ig { background: #e1306c; }
+    .social-btn:hover { opacity: 0.9; }
+
+    /* Footer */
+    footer { background: var(--dark-blue); color: white; padding: 25px 20px; text-align: center; font-size: 0.9rem; margin-top: 40px; }
+    footer a { color: var(--secondary-color); text-decoration: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AhJo Badminton</h1>
+    <p>Superfan & Content Creator</p>
+  </header>
+
+  <div class="container">
+    
+    <div class="quote">“Cheering is not just noise. It’s love. It’s belief. It’s my way of fighting for Malaysia.”</div>
+
+    <!-- About Section -->
+    <h2>About Me</h2>
+    <p>I’m Joe, better known as <strong>AhJo Badminton</strong>, a passionate Malaysian badminton superfan, cheerleader, and digital content creator. My mission is twofold: to create an electrifying, unforgettable atmosphere directly on the stadium floors for our national athletes, and to capture that intense passion through high-energy digital content that unites millions of fans online.</p>
+    <p>To bridge the arena gap where Malaysian voices are often outnumbered, I am actively working to build a thriving online community and establish an official Malaysian badminton support and cheerleading team—boosting athlete morale and solidifying our badminton fan culture worldwide.</p>
+
+    <!-- Journey Sections -->
+    <h2>My Journey – Fueled by Love & Sacrifice</h2>
+    <p style="margin-bottom: 25px;">From local stadiums to international arenas, I travel directly to major world tournaments—bringing live stadium energy to both the stands and digital screens worldwide.</p>
+    
+    <!-- 2026 Grid Row -->
+    <div class="row" style="margin-bottom: 20px;">
+      <div class="col">
+        <div class="journey-card featured">
+          <h3>🔥 2026 Season</h3>
+          <p style="font-size:0.95rem; line-height: 1.7; color: #222;">
+            Malaysia Open • Thailand Masters • All England • Thomas & Uber Cup (Denmark) • Thailand Open • Malaysia Masters • Singapore Open
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2025 & 2024 Grid Row -->
+    <div class="row">
+      <div class="col">
+        <div class="journey-card">
+          <h3>⚡ 2025 Season</h3>
+          <p style="font-size:0.95rem; line-height: 1.7; color: #444;">
+            Malaysia Open • All England • Thailand Open • Singapore Open • Indonesia Open • Hong Kong Open • Korea Open • Malaysia Super 100 • SEA Games (Thailand)
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="journey-card">
+          <h3>⏳ 2024 Season</h3>
+          <p style="font-size:0.95rem; line-height: 1.7; color: #555;">
+            Malaysia Open • Asia Championships • Thailand Open • Malaysia Masters • Singapore Open • Australia Open • Paris Olympics • Petronas International Challenge • KL Masters 100 • China Masters • BWF World Tour Finals
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Media & Milestones -->
+    <h2>Media & Milestones</h2>
+    <ul>
+      <li>Interviewed and featured by major networks: <strong>Astro Arena, TV3, Hot FM, Era.FM, The Star, Sin Chew Daily, BWF YouTube, and The Rakyat Post</strong>.</li>
+      <li>Cheered live on the ground through sacrifices, lost voices, and unforgettable tournament rallies.</li>
+    </ul>
+
+    <!-- Impact & Vision -->
+    <h2>The Impact & Vision</h2>
+    <ul>
+      <li><strong>Viral Content Creator:</strong> Directing emotional, high-energy stadium cheers and match content touching millions across Facebook and Instagram.</li>
+      <li><strong>Athlete Support:</strong> Driving intense stadium energy making players feel they are never alone.</li>
+      <li><strong>The Movement:</strong> Establishing a structured, passionate fan support network traveling globally to strengthen national pride and unity.</li>
+    </ul>
+
+    <!-- Gallery Section (Exactly 12 Photos) -->
+    <h2>Unforgettable Moments</h2>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="AhJo at Paris Olympics 2024">
+      <img src="images/photo2.jpg" alt="AhJo cheering at event">
+      <img src="images/photo3.jpg" alt="AhJo and fans with Malaysia flag">
+      <img src="images/photo4.jpg" alt="AhJo collage Malaysia flag moments">
+      <img src="images/photo5.jpg" alt="AhJo cheering with full passion">
+      <img src="images/photo6.jpg" alt="AhJo Badminton Moment">
+      <img src="images/photo7.jpg" alt="AhJo Badminton Moment">
+      <img src="images/photo8.jpg" alt="AhJo Badminton Moment">
+      <img src="images/photo9.jpg" alt="AhJo Badminton Moment">
+      <img src="images/photo10.jpg" alt="AhJo Badminton Moment">
+      <img src="images/photo11.jpg" alt="AhJo Badminton Moment">
+      <img src="images/photo12.jpg" alt="AhJo Badminton Moment">
+    </div>
+
+    <!-- Partnership Call to Action -->
+    <div class="contact-box">
+      <h2>Let’s Work Together</h2>
+      <p>I am looking for brands, media partners, and sponsors who believe in heart, passion, and purpose. Let’s raise our voices louder and show the world the true spirit of Malaysia.</p>
+      
+      <a href="https://www.facebook.com/AhJoBadmintonMY" target="_blank" class="social-btn fb">Connect on Facebook</a>
+      <a href="https://www.instagram.com/AhJo_Badminton" target="_blank" class="social-btn ig">Connect on Instagram</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 AhJo Badminton. All rights reserved. | Official Business Inquiries: <a href="mailto:jammchao@gmail.com">jammchao@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
