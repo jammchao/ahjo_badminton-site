@@ -125,23 +125,23 @@
     }
     .journey-card h3 { color: #0d1f38; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
 
-    /* BALANCED 12-PHOTO GRID GALLERY */
+    /* NEW FLEXIBLE PHOTO GALLERY (No cutting out) */
     .gallery { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-      gap: 15px; 
+      columns: 3 240px;
+      column-gap: 15px;
       margin: 25px 0; 
     }
     .gallery img { 
       width: 100%; 
-      height: 280px; 
-      object-fit: cover; 
+      height: auto; 
+      display: inline-block;
+      margin-bottom: 15px;
       border-radius: 8px; 
       box-shadow: 0 4px 8px rgba(0,0,0,0.08); 
       transition: transform 0.2s ease;
     }
     .gallery img:hover { 
-      transform: scale(1.03); 
+      transform: scale(1.02); 
     }
 
     /* Contact & Social Footer Block */
@@ -184,6 +184,13 @@
       }
       header {
         padding: 50px 15px;
+      }
+      .gallery {
+        columns: 2 140px; /* Grid layout adjusts for smaller smartphones seamlessly */
+        column-gap: 10px;
+      }
+      .gallery img {
+        margin-bottom: 10px;
       }
     }
   </style>
